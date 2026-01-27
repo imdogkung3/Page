@@ -1,0 +1,35 @@
+task.spawn(function()
+	game:GetService("RunService").Stepped:Connect(function()
+		if setscriptable then
+			setscriptable(game.Players.LocalPlayer, "SimulationRadius", true)
+			game.Players.LocalPlayer.SimulationRadius = math.huge
+		end
+		if sethiddenproperty then
+			sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+		end
+	end)
+end)
+
+task.spawn(function()
+	while task.wait() do
+		for _, v in pairs(workspace.Enemies:GetChildren()) do
+			if v.Name == Magnet_monster and v:FindFirstChild("HumanoidRootPart") then
+				if not v.HumanoidRootPart:FindFirstChild("BodyVelocity") then
+					BodyVelocity = Instance.new("BodyVelocity")
+					BodyVelocity.Name = "BodyVelocity"
+					BodyVelocity.Parent = v.HumanoidRootPart
+					BodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+					BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+				end
+				if Distance(v.HumanoidRootPart.Position, Pos_mon.Position) <= 300 then
+					for _, val in pairs(v:GetDescendants()) do
+						if val:IsA("BasePart") then
+							val.CanCollide = false
+						end
+					end
+					v.HumanoidRootPart.CFrame = Pos_mon
+				end
+			end
+		end
+	end
+end)
