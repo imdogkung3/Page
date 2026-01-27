@@ -1,0 +1,56 @@
+local Quests = loadstring(game:HttpGet("https://raw.githubusercontent.com/imdogkung3/Page/refs/heads/main/Model/Quests"))()()
+
+local NPCList = loadstring(game:HttpGet("https://raw.githubusercontent.com/imdogkung3/Page/refs/heads/main/Model/NpcList"))()()
+
+return function()
+    local less = 1 / 0
+    local AllNearestQuests = {}
+    for i, _v in pairs(require(game.ReplicatedStorage.Quests)) do
+        for loop = 1, #_v do
+            local v = _v[loop]
+            if game.Players.LocalPlayer.Data.Level.Value >= v.LevelReq and not v.MeetsRequirements then
+                if game.Players.LocalPlayer.Data.Level.Value - v.LevelReq < less then
+                    if v.Task[table.foreach(v.Task, tostring)] ~= 1 then
+                        QUESTNAME = tostring(i)
+                        QUESTNUMBER = tonumber(loop)
+                        MONNAME = (table.foreach(v.Task, tostring))
+                        QUESTLEVEL = v.LevelReq
+                        less = game.Players.LocalPlayer.Data.Level.Value - v.LevelReq
+                        table.insert(AllNearestQuests, 1, {
+                            name = tostring(i),
+                            num  = tonumber(loop),
+                            mon  = (table.foreach(v.Task, tostring)),
+                            lvl  = v.LevelReq,
+                        })
+                    end
+                end
+            end
+        end
+    end
+    for _, Data in pairs(NPCList) do
+        for Index, Level in pairs(Data.Levels) do
+            if Level == QUESTLEVEL then
+                QUESTMOB = Data.NPCName
+                QUESTPOS = CFrame.new(Data.Position)
+            end
+            if AllNearestQuests[2]
+            and Level == AllNearestQuests[2].lvl then
+                AllNearestQuests[2].Pos = CFrame.new(Data.Position)
+                AllNearestQuests[2].QuestNPC = Data.NPCName
+            end
+        end
+    end
+    if ("Shanda"):find(MONNAME) or MONNAME == "Wysper" then
+        QUESTPOS = CFrame.new(-7860, 5545, -380)
+    end
+    if ("God's Guard"):find(MONNAME) then
+        QUESTPOS = CFrame.new(-4723, 845, -1951)
+    end
+    if MONNAME:sub(1, #MONNAME) == "Bandit" then
+        QUESTPOS = CFrame.new(1060, 16, 1549)
+    end
+    if MONNAME:sub(1, #MONNAME) == "Zombie" then
+        QUESTPOS = CFrame.new(-5494, 48, -794)
+    end
+    return AllNearestQuests
+end
