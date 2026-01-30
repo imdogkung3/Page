@@ -8240,7 +8240,7 @@ end
 
 Library.Elements = Elements
 
-if RunService:IsStudio() then
+--[[if RunService:IsStudio() then
 	makefolder = function(...) return ... end;
 	makefile = function(...) return ... end;
 	isfile = function(...) return ... end;
@@ -9565,7 +9565,7 @@ local InterfaceManager = {} do
 	end
 
 
-end
+end]]
 
 
 
