@@ -9570,7 +9570,6 @@ end
 
 
 
-
 Library.CreateWindow = function(self, Config)
 
 
@@ -9728,10 +9727,10 @@ Library.CreateWindow = function(self, Config)
 	table.insert(Library.Windows, Window)
 
 
-	InterfaceManager:SetTheme(Config.Theme)
+	--InterfaceManager:SetTheme(Config.Theme)
 
 
-	Library:SetTheme(Config.Theme)
+	--Library:SetTheme(Config.Theme)
 
 
 
