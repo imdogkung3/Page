@@ -1231,6 +1231,7 @@ local Creator = {
 		ScreenGui = {
 			ResetOnSpawn = false,
          IgnoreGuiInset = true,
+         DisplayOrder = 999999,
 			ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
 		},
 		Frame = {
