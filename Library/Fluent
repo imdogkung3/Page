@@ -8240,7 +8240,7 @@ end
 
 Library.Elements = Elements
 
-if RunService:IsStudio() then
+--[[if RunService:IsStudio() then
 	makefolder = function(...) return ... end;
 	makefile = function(...) return ... end;
 	isfile = function(...) return ... end;
@@ -9566,7 +9566,7 @@ local InterfaceManager = {} do
 
 
 end
-
+]]
 
 
 
@@ -11083,4 +11083,4 @@ end)
     
 
 if RunService:IsStudio() then task.wait(0.01) end
-return Library, SaveManager, InterfaceManager, Mobile
+return Library, Mobile
