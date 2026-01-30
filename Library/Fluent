@@ -8240,7 +8240,7 @@ end
 
 Library.Elements = Elements
 
---[[if RunService:IsStudio() then
+if RunService:IsStudio() then
 	makefolder = function(...) return ... end;
 	makefile = function(...) return ... end;
 	isfile = function(...) return ... end;
@@ -8254,7 +8254,7 @@ local SaveManager = {} do
 
 
 
-	SaveManager.Folder = "FluentSettings"
+	SaveManager.Folder = ""
 
 
 	SaveManager.Ignore = {}
@@ -9223,7 +9223,7 @@ end
 local InterfaceManager = {} do
 
 
-	InterfaceManager.Folder = "FluentSettings"
+	InterfaceManager.Folder = ""
 
 
 	InterfaceManager.Settings = {
@@ -9565,7 +9565,7 @@ local InterfaceManager = {} do
 	end
 
 
-end]]
+end
 
 
 
