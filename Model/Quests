@@ -1,3 +1,0 @@
-return function()
-    return require(game.ReplicatedStorage.Quests)
-end
