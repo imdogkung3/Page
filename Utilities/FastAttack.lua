@@ -1,4 +1,4 @@
-do
+
     local W = {}
     local a = game:GetService('Players')
     local h = game:GetService("RunService")
@@ -55,4 +55,3 @@ do
         while task.wait() do if _G.FastAttack == os.time() then pcall(function() h:Attack() end) end end
     end)
     function W.Attack(h) pcall(function() _G.FastAttack = os.time() end) end
-end
