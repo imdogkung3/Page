@@ -1,1 +1,58 @@
-return(function(...)local n,e,h=table,string,bit local d,a,o,s,e,u,Z,T,r,t,U=e.byte,e.char,e.sub,n.concat,n.insert,math.ldexp,getfenv and getfenv()or _ENV,setmetatable,select,unpack or n.unpack,tonumber;local i=(function(f)local e,i,l,U,c,t,d=1,function(l)local e=""for U=1,#l,1 do e=e..a(d(l,U)-(35))end return U(e,36)end,"","",{},256,{}for e=0,t-1 do d[e]=a(e)end;local function r()local l=i(o(f,e,e))e=e+1;local U=i(o(f,e,e+l-1))e=e+l;return U end;l=a(r())c[1]=l;while e<#f do local e=r()if d[e]then U=d[e]else U=l..o(l,1,1)end;d[t]=l..o(U,1,1)c[#c+1],l,t=U,U,t+1 end;return n.concat(c)end)("T\\TSUZXTUTdUZXTSUVSUVVUUsUUvUVZUV[UVYUU{UVUUUyTUTWUZ\\UUyUUsUVTUUwTUTZUZ\\UUSUV[UV[UVWUT}UUwUV[TUT{UZ\\UUzUZzUVWUVZUTpUTeUTeUVWUUsUZiUUwUUtUZlUTdUUuUVVUVTUTeUVYUUsUVeUTeUUiUUuUTnUUuUUuUVZUTwUVTTUTUUZ\\UUqUT}UZZUZ\\UT|U[gUV[UTwUZzUUsUUuUU}TVTTUZoUZ\\UV[U[gUU}TUTXUZ\\UVZU[fUVeUVUTiUZ\\TlTnUZ\\TTU\\wUZXU\\{U\\SUZXTzU\\}TSU\\{TVTSTlUZXUdZUZpUZ\\UdWUdZUdgUdjUdTUdgUdSUd[UdWU\\pUZXUTfUdWTYTSUZwUd\\UdXTST[UZ\\TzTkUdyU\\{UZWTYUd\\UdlU\\{U\\{TSTmUdjUZ\\U\\pUdnUe[Ud{UdWUekTSUdqTSU\\jUZXU\\lUVZU\\nUdfTSUVeUUsUU{U[TUduUZXUUfUVVUUyUUyUVSUZuUdlU\\UU\\WUZXU\\YUZiU\\\\U\\lU\\fTfU\\wU\\vUelUd}UdkUelUdnTYTsUZ\\TeUdyUZXTWTvUfrUftTgUeeTSTzTrUdjUdZUdxU\\SUeuUdVUeoUgZUenUZ\\U\\SU\\{UeuU\\zUZXUejUftUf{");local e,n,l,U=1,h and h.bxor or function(e,l)local U,n=1,0 while e>0 and l>0 do local o,d=e%2,l%2 if o~=d then n=n+U end e,l,U=(e-o)/2,(l-d)/2,U*2 end if e<l then e=l end while e>0 do local l=e%2 if l>0 then n=n+U end e,U=(e-l)/2,U*2 end return n end,0,function(U,e,l)if l then local e=(U/2^(e-1))%2^((l-1)-(e-1)+1);return e-e%1;else local e=2^(e-1);return(U%(e+e)>=e)and 1 or 0;end;end local l,f,c=function()local o,U,t,d=d(i,e,e+3);o,U,t,d=n(o,l),n(U,l),n(t,l),n(d,l)e=e+4;return(d*16777216)+(t*65536)+(U*256)+o;end,function()local l=n(d(i,e,e),l);e=e+1;return l;end,function()local U,o=d(i,e,e+2);U,o=n(U,l),n(o,l)e=e+2;return(o*256)+U;end;local function h()local n=l();local e=l();local o=1;local n=(U(e,1,20)*(2^32))+n;local l=U(e,21,31);local e=((-1)^U(e,32));if(l==0)then if(n==0)then return e*0;else l=1;o=0;end;elseif(l==2047)then return(n==0)and(e*(1/0))or(e*(0/0));end;return u(e,l-1023)*(o+(n/(2^52)));end;local e,n=l,function(U)local t;if(not U)then U=l();if(U==0)then return'';end;end;t=o(i,e,e+U-1);e=e+U;local l={}for e=1,#t do l[e]=a(n(d(o(t,e,e)),0))end return s(l);end;local e,s=l,function(...)return{...},r('#',...)end local function u()local t,i,e={},{},{};local a={t,i,nil,e};local e,o=l(),{}for U=1,e do local l,e=f();if(l==3)then e=(f()~=0);elseif(l==0)then e=h();elseif(l==2)then e=n();end;o[U]=e;end;for i=1,l()do local e=f();if(U(e,1,1)==0)then local n,d,e=U(e,2,3),U(e,4,6),{c(),c(),nil,nil};if(n==0)then e[3]=c();e[4]=c();elseif(n==1)then e[3]=l();elseif(n==2)then e[3]=l()-(2^16)elseif(n==3)then e[3]=l()-(2^16)e[4]=c();end;if(U(d,1,1)==1)then e[2]=o[e[2]]end if(U(d,2,2)==1)then e[3]=o[e[3]]end if(U(d,3,3)==1)then e[4]=o[e[4]]end t[i]=e;end end;for e=1,l()do i[e-1]=u();end;a[3]=f();return a;end;local function a(e,i,c)local e,U,l=e[1],e[2],e[3];return function(...)local o,u,n,r,U,d,Z,s,h,f,l=e,U,l,s,1,-1,{},{...},r('#',...)-1,{},{};for e=0,h do if(e>=n)then Z[e-n]=s[e+1];else l[e]=s[e+1];end;end;local e=h-n+1 local e;local n;while true do e=o[U];n=e[1];if n<=15 then if n<=7 then if n<=3 then if n<=1 then if n==0 then l[e[2]]=e[3];else local e=e[2]l[e]=l[e]()end;elseif n==2 then local e=e[2]l[e](l[e+1])else local U=e[2];local n=l[e[3]];l[U+1]=n;l[U]=n[e[4]];end;elseif n<=5 then if n==4 then if l[e[2]]then U=U+1;else U=e[3];end;else local e=e[2]l[e](l[e+1])end;elseif n==6 then l[e[2]]=e[3];else local e=e[2]l[e]=l[e]()end;elseif n<=11 then if n<=9 then if n==8 then do return end;else l[e[2]]=c[e[3]];end;elseif n>10 then local U=e[2]local n,e=r(l[U](t(l,U+1,e[3])))d=e+U-1 local e=0;for U=U,d do e=e+1;l[U]=n[e];end;else local e=e[2]l[e]=l[e](t(l,e+1,d))end;elseif n<=13 then if n>12 then l[e[2]]=i[e[3]];else l[e[2]]=l[e[3]][e[4]];end;elseif n==14 then local U=e[2]local n,e=r(l[U](t(l,U+1,e[3])))d=e+U-1 local e=0;for U=U,d do e=e+1;l[U]=n[e];end;else l[e[2]]=c[e[3]];end;elseif n<=23 then if n<=19 then if n<=17 then if n==16 then l[e[2]]=i[e[3]];else l[e[2]]=l[e[3]][e[4]];end;elseif n>18 then l[e[2]]=l[e[3]];else local r=u[e[3]];local t;local n={};t=T({},{__index=function(l,e)local e=n[e];return e[1][e[2]];end,__newindex=function(U,e,l)local e=n[e]e[1][e[2]]=l;end;});for d=1,e[4]do U=U+1;local e=o[U];if e[1]==19 then n[d-1]={l,e[3]};else n[d-1]={i,e[3]};end;f[#f+1]=n;end;l[e[2]]=a(r,t,c);end;elseif n<=21 then if n==20 then local f;local T,a;local i;local n;l[e[2]]=c[e[3]];U=U+1;e=o[U];l[e[2]]=c[e[3]];U=U+1;e=o[U];n=e[2];i=l[e[3]];l[n+1]=i;l[n]=i[e[4]];U=U+1;e=o[U];l[e[2]]=e[3];U=U+1;e=o[U];n=e[2]T,a=r(l[n](t(l,n+1,e[3])))d=a+n-1 f=0;for e=n,d do f=f+1;l[e]=T[f];end;U=U+1;e=o[U];n=e[2]l[n]=l[n](t(l,n+1,d))U=U+1;e=o[U];n=e[2]l[n]=l[n]()U=U+1;e=o[U];l[e[2]]=c[e[3]];U=U+1;e=o[U];l[e[2]][e[3]]=e[4];U=U+1;e=o[U];l[e[2]]=c[e[3]];else local U=e[2]l[U](t(l,U+1,e[3]))end;elseif n>22 then local U=e[2]l[U](t(l,U+1,e[3]))else l[e[2]][e[3]]=e[4];end;elseif n<=27 then if n<=25 then if n>24 then if l[e[2]]then U=U+1;else U=e[3];end;else local d;local n;n=e[2];d=l[e[3]];l[n+1]=d;l[n]=d[e[4]];U=U+1;e=o[U];l[e[2]]=c[e[3]];U=U+1;e=o[U];l[e[2]]=l[e[3]][e[4]];U=U+1;e=o[U];n=e[2]l[n](t(l,n+1,e[3]))U=U+1;e=o[U];U=e[3];end;elseif n==26 then local n=e[2];local U=l[e[3]];l[n+1]=U;l[n]=U[e[4]];else do return end;end;elseif n<=29 then if n>28 then l[e[2]][e[3]]=e[4];else U=e[3];end;elseif n<=30 then local t=u[e[3]];local d;local n={};d=T({},{__index=function(l,e)local e=n[e];return e[1][e[2]];end,__newindex=function(U,e,l)local e=n[e]e[1][e[2]]=l;end;});for d=1,e[4]do U=U+1;local e=o[U];if e[1]==19 then n[d-1]={l,e[3]};else n[d-1]={i,e[3]};end;f[#f+1]=n;end;l[e[2]]=a(t,d,c);elseif n>31 then U=e[3];else local e=e[2]l[e]=l[e](t(l,e+1,d))end;U=U+1;end;end;end;return a(u(),{},Z)(...);end)(...)
+do
+    local W = {}
+    local a = game:GetService('Players')
+    local h = game:GetService("RunService")
+    local h = game:GetService('ReplicatedStorage')
+    local X = game:GetService("Workspace")
+    local X = game:GetService("VirtualInputManager")
+    local X = a.LocalPlayer
+    local X = h:WaitForChild('Modules')
+    local w = X:WaitForChild("Net")
+    local X = w:WaitForChild("RE/RegisterAttack")
+    local X = w:WaitForChild('RE/RegisterHit')
+    local X = w:WaitForChild('RE/ShootGunEvent')
+    local X = h:WaitForChild("Remotes"):WaitForChild('Validator2')
+    local h = game.ReplicatedStorage.Modules
+    local X = h.Net
+    local h, h = X:WaitForChild("RE/RegisterHit"), X:WaitForChild('RE/RegisterAttack')
+    local h = {}
+    function GetAllBladeHits()
+        bladehits = {}
+        for X, X in pairs(workspace.Enemies:GetChildren()) do
+            if X:FindFirstChild('Humanoid') and X:FindFirstChild('HumanoidRootPart') and X.Humanoid.Health > 0 and (X.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 65 then
+                table.insert(bladehits, X)
+            end
+        end
+        return bladehits
+    end
+    function Getplayerhit()
+        bladehits = {}
+        for X, X in pairs(workspace.Characters:GetChildren()) do
+            if X.Name ~= game.Players.LocalPlayer.Name and X:FindFirstChild('Humanoid') and X:FindFirstChild('HumanoidRootPart') and X.Humanoid.Health > 0 and (X.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 65 then
+                table.insert(bladehits, X)
+            end
+        end
+        return bladehits
+    end
+    local X = (Services.ReplicatedStorage.Modules.Net)
+    local w = require(X):RemoteEvent("RegisterAttack", true)
+    local D = require(X):RemoteEvent("RegisterHit", true)
+    function h:Attack()
+        local X = {}
+        for y, y in pairs(GetAllBladeHits()) do table.insert(X, y) end
+        for y, y in pairs(Getplayerhit()) do table.insert(X, y) end
+        if #X == 0 then return end
+        local y = {[1] = nil, [2] = {}, [4] = "078da5141"}
+        for L, L in pairs(X) do
+            w:FireServer(0)
+            if not y[1] then y[1] = L.Head end
+            table.insert(y[2], {[1] = L, [2] = L.HumanoidRootPart})
+            table.insert(y[2], L)
+        end
+        D:FireServer(unpack(y))
+    end
+    task.spawn(function()
+        while task.wait() do if _G.FastAttack == os.time() then pcall(function() h:Attack() end) end end
+    end)
+    function W.Attack(h) pcall(function() _G.FastAttack = os.time() end) end
+end
