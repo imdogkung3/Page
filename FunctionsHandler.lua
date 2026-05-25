@@ -3,7 +3,7 @@ local FunctionsHandler = {
 }
 
 setmetatable(FunctionsHandler, {
-    index = function(Self, Name)
+    __index = function(Self, Name)
         local Result = rawget(Self, Name)
 
         if not Result then
