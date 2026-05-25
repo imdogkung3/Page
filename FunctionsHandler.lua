@@ -60,14 +60,13 @@ setmetatable(FunctionsHandler, {
             end
 
             function Result.Get(SelfData, CacheName)
-                return SelfData.Constants[CacheName]
-                    or SelfData.RealCache[CacheName]
+                return SelfData.Constants[CacheName] or SelfData.RealCache[CacheName]
             end
 
             Result.CacheListener.Parent = Result
 
             setmetatable(Result.CacheListener, {
-                newindex = function(Table, CacheName, Value)
+                __newindex = function(Table, CacheName, Value)
                     local Parent = Table.Parent
                     local Event = Parent.Events[CacheName]
 
