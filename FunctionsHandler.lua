@@ -23,9 +23,9 @@ setmetatable(FunctionsHandler, {
 
                 return true
             end
-
-            function Result.RegisterMethod(SelfData, MethodName, Callback)
-                SelfData.Methods[MethodName] = {
+                
+            function Result:RegisterMethod(MethodName, Callback)
+                self.Methods[MethodName] = {
                     Name = MethodName,
                     Callback = Callback,
 
@@ -60,7 +60,8 @@ setmetatable(FunctionsHandler, {
             end
 
             function Result.Get(SelfData, CacheName)
-                return SelfData.Constants[CacheName] or SelfData.RealCache[CacheName]
+                return SelfData.Constants[CacheName]
+                    or SelfData.RealCache[CacheName]
             end
 
             Result.CacheListener.Parent = Result
