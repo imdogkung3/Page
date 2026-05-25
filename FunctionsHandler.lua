@@ -26,9 +26,11 @@ setmetatable(FunctionsHandler, {
                         J.Methods[K] = {
                             Name = K,
                             Callback = L,
+
                             Call = function(M, ...)
                                 return M.Callback(...)
                             end,
+
                             Events = {}
                         }
 
@@ -79,3 +81,29 @@ setmetatable(FunctionsHandler, {
         return QueryResult
     end
 })
+
+FunctionsHandler.LocalPlayerController:Register()
+FunctionsHandler.ExpRedeem:Register()
+FunctionsHandler.LevelFarm:Register()
+FunctionsHandler.SniperFruit:Register()
+FunctionsHandler.Pole:Register()
+FunctionsHandler.Saber:Register()
+FunctionsHandler.Yama:Register()
+FunctionsHandler.Tushita:Register()
+FunctionsHandler.CursedDualKatana:Register()
+FunctionsHandler.SkullGuitar:Register()
+FunctionsHandler.PullLever:Register()
+FunctionsHandler.SecondSeaPuzzle:Register()
+FunctionsHandler.ColosseumPuzzle:Register()
+FunctionsHandler.Trevor:Register()
+FunctionsHandler.EvoRaceV2:Register()
+FunctionsHandler.EvoRaceV3:Register()
+FunctionsHandler.ThirdSeaPuzzle:Register()
+FunctionsHandler.PirateRaid:Register()
+FunctionsHandler.RaidController:Register()
+FunctionsHandler.MeleesController:Register()
+FunctionsHandler.BossesTask:Register()
+FunctionsHandler.SpecialBossesTask:Register()
+FunctionsHandler.CollectFruit:Register()
+FunctionsHandler.CollectBerry:Register()
+FunctionsHandler.UtillyItemsActivitation:Register()
