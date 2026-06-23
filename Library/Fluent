@@ -579,7 +579,7 @@ function Creator.Disconnect()
 end
 
 Creator.Themes = Themes
-Creator.Theme = Creator.Theme or 'Quertzy'
+Creator.Theme = Creator.Theme or 'Dark'
 
 function Creator.GetThemeProperty(Property)
     local Theme = Creator.Themes[Creator.Theme]
@@ -588,11 +588,11 @@ function Creator.GetThemeProperty(Property)
         return Theme[Property]
     end
 
-    return Creator.Themes.Quertzy[Property]
+    return Creator.Themes.Dark[Property]
 end
 function Creator.UpdateTheme()
     if not Creator.Themes[Creator.Theme] then
-        Creator.Theme = 'Quertzy'
+        Creator.Theme = 'Dark'
     end
 
     for Instance, Object in next, Creator.Registry do
@@ -637,7 +637,7 @@ function Creator.GetThemeProperty(Property)
         return Themes[Library.Theme][Property]
     end
 
-    return Themes.Quertzy[Property]
+    return Themes.Dark[Property]
 end
 
 local MiniMessageColors = {
@@ -6776,7 +6776,7 @@ Library.CreateWindow = function(self, Config)
     Library.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
     Library.UseAcrylic = Config.Acrylic or false
     Library.Acrylic = Config.Acrylic or false
-    Library.Theme = Config.Theme or 'Quertzy'
+    Library.Theme = Config.Theme or 'Dark'
 
     if Config.BackgroundImage == nil then
         Config.BackgroundImage = 'rbxassetid://13196113628'
