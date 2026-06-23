@@ -7321,16 +7321,3 @@ if RunService:IsStudio() then
 end
 
 return Library, Mobile
-utton.MouseButton1Click, function()
-    task.wait(0.1)
-
-    if not isDragging then
-        Library.Window:Minimize()
-    end
-end)
-
-if RunService:IsStudio() then
-    task.wait(0.01)
-end
-
-return Library, Mobile
