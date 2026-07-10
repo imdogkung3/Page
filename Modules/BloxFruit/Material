@@ -1,4 +1,4 @@
-return = {
+return {
     {
         ["Fish Tail"] = {"Fishman Commando", "Fishman Warrior"},
     },
