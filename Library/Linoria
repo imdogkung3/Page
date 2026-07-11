@@ -3508,7 +3508,6 @@ function Library.CreateWindow(self, ...)
         Config = ...
     else
         Config.Title = Arguments[1]
-        Config.AutoShow = Arguments[2] or true
     end
     if typeof(Config.Title) ~= 'string' then
         Config.Title = 'No title'
@@ -4342,9 +4341,7 @@ function Library.CreateWindow(self, ...)
         end
     end))
 
-    if Config.AutoShow then
-        task.spawn(Library.Toggle)
-    end
+    task.spawn(Library.Toggle)
 
     Window.Holder = Outer
     Library.Window = Window
