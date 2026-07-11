@@ -46,7 +46,7 @@ local LibraryMainOuterFrame, Library = nil, {
     FontColor = Color3.fromRGB(255, 255, 255),
     MainColor = Color3.fromRGB(28, 28, 28),
     BackgroundColor = Color3.fromRGB(20, 20, 20),
-    AccentColor = Color3.fromRGB(0, 85, 255),
+    AccentColor = Color3.fromRGB(28, 28, 28),
     OutlineColor = Color3.fromRGB(50, 50, 50),
     RiskColor = Color3.fromRGB(255, 50, 50),
     Black = Color3.new(0, 0, 0),
@@ -3508,13 +3508,13 @@ function Library.CreateWindow(self, ...)
         Config = ...
     else
         Config.Title = Arguments[1]
-        Config.AutoShow = Arguments[2] or false
+        Config.AutoShow = Arguments[2] or true
     end
     if typeof(Config.Title) ~= 'string' then
         Config.Title = 'No title'
     end
     if typeof(Config.TabPadding) ~= 'number' then
-        Config.TabPadding = 1
+        Config.TabPadding = 0
     end
     if typeof(Config.MenuFadeTime) ~= 'number' then
         Config.MenuFadeTime = 0.2
@@ -3539,18 +3539,16 @@ function Library.CreateWindow(self, ...)
             local ViewportSizeYOffset = tonumber(workspace.CurrentCamera.ViewportSize.Y) - 35
 
             if ViewportSizeYOffset >= 200 and ViewportSizeYOffset <= 300 then
-                Config.Size = UDim2.fromOffset(500, ViewportSizeYOffset)
+                Config.Size = UDim2.fromOffset(550, ViewportSizeYOffset)
             else
-                Config.Size = UDim2.fromOffset(500, 300)
+                Config.Size = UDim2.fromOffset(550, 300)
             end
         end
     end
     if Config.TabPadding <= 0 then
         Config.TabPadding = 1
     end
-    if Config.Center then
-        Config.Position = UDim2.new(0.5, -Config.Size.X.Offset / 2, 0.5, -Config.Size.Y.Offset / 2 - 2)
-    end
+    Config.Position = UDim2.new(0.5, -Config.Size.X.Offset / 2, 0.5, -Config.Size.Y.Offset / 2 - 2)
 
     local Window, Outer = {
         Tabs = {},
@@ -3571,9 +3569,7 @@ function Library.CreateWindow(self, ...)
 
     Library:MakeDraggable(Outer, 25, true)
 
-    if Config.Resizable then
-        Library:MakeResizable(Outer, Library.MinSize)
-    end
+    Library:MakeResizable(Outer, Library.MinSize)
 
     local Inner = Library:Create('Frame', {
         BackgroundColor3 = Library.MainColor,
@@ -4356,4 +4352,3 @@ function Library.CreateWindow(self, ...)
     return Window
 end
 return Library
-
