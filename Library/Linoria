@@ -2622,6 +2622,7 @@ do
             Value = Info.Multi and {},
             Multi = Info.Multi,
             Type = 'Dropdown',
+            Callback = Info.Callback,
         }, self
         local Container, RelativeOffset = Groupbox.Container, 0
 
