@@ -26,7 +26,7 @@ end)()
 
 local Connect = Module.Connect
 
-function , Interval)
+function Module.NewOption(Function, Interval)
     Interval = Interval or 0.1
 
     Connect(Heartbeat, function()
