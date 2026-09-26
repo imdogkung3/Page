@@ -1,45 +1,45 @@
 local _ENV = (getgenv or getrenv or getfenv)()
 
-local RunService = game:GetService("RunService")
-local Heartbeat = RunService.Heartbeat
+local RUNSERVICE = game:GetService("RunService")
+local HEARTBEAT = RUNSERVICE.Heartbeat
 
-local Module = {}
+local MODULE = {}
 
-Module.Connect = (function()
-    local Connections = _ENV.Connections or {}
+MODULE.CONNECT = (function()
+    local CONNECTIONS = _ENV.Connections or {}
 
-    for i = 1, #Connections do
-        Connections[i]:Disconnect()
+    for I = 1, #CONNECTIONS do
+        CONNECTIONS[I]:Disconnect()
     end
 
-    table.clear(Connections)
-    _ENV.Connections = Connections
+    table.clear(CONNECTIONS)
+    _ENV.Connections = CONNECTIONS
 
-    return function(Instance, Callback)
-        local Connection = Instance:Connect(Callback)
+    return function(INSTANCE, CALLBACK)
+        local CONNECTION = INSTANCE:Connect(CALLBACK)
 
-        table.insert(Connections, Connection)
+        table.insert(CONNECTIONS, CONNECTION)
 
-        return Connection
+        return CONNECTION
     end
 end)()
 
-local Connect = Module.Connect
+local CONNECT = MODULE.CONNECT
 
-function Module.NewOption(Function, Interval)
-    Interval = Interval or 0.1
+function MODULE.NEWOPTION(FUNCTION, INTERVAL)
+    INTERVAL = INTERVAL or 0.1
 
-    Connect(Heartbeat, function()
-        task.wait(Interval)
+    CONNECT(HEARTBEAT, function()
+        task.wait(INTERVAL)
 
-        if Function then
-            local Success, Error = pcall(Function)
+        if FUNCTION then
+            local SUCCESS, ERROR = pcall(FUNCTION)
 
-            if not Success then
-                print(Error)
+            if not SUCCESS then
+                print(ERROR)
             end
         end
     end)
 end
 
-return Module
+return MODULE
